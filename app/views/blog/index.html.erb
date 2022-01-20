@@ -1,0 +1,6 @@
+<h1>My Blog</h1>
+<br />
+<% @blog.reverse.map do |blog| %>
+<h2><%= link_to blog.title, blog_path(blog) %></h2>
+<p><%= blog.content[0,20] %>...</p>
+<% end %>
