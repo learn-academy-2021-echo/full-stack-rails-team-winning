@@ -269,5 +269,5 @@ end
 ```
 
 ```Ruby
-validates :title, length: { minimum: 5 }
+validates :title, length: { minimum: 10 }
 ```
