@@ -1,8 +1,8 @@
 ## Challenges
 
-# As a developer, I have been commissioned to create an application where a user can see and create blog posts.
+#### As a developer, I have been commissioned to create an application where a user can see and create blog posts.
 
-# As a developer, I can create a full-stack Rails application.
+#### As a developer, I can create a full-stack Rails application.
 
 ```Shell
 $ rails new my_app -d postgresql -T
@@ -11,14 +11,14 @@ $ rails db:create
 $ rails s
 ```
 
-# As a developer, my blog post can have a title and content.
+#### As a developer, my blog post can have a title and content.
 
 ```Shell
 $ rails g model Blog title:string content:text
 $ rails c
 ```
 
-# As a developer, I can add new blog posts directly to my database.
+#### As a developer, I can add new blog posts directly to my database.
 
 ```Shell
 $ Blog.create title:'My First Blog Post', content:'This is my first blog entry. Today I learned about full-stack rails and it has gotten me a little confused, but
@@ -27,9 +27,7 @@ it is okay!'
 Blog.create title:'My Second Blog Post', content:'This is my second blog post. Today I am testing out multiple blog posts and seeing how they display on my blog!
 ```
 
-# READ
-
-# As a user, I can see all the blog titles listed on the home page of the application.
+#### As a user, I can see all the blog titles listed on the home page of the application.
 
 ```Ruby
 def index
@@ -55,9 +53,9 @@ get '/blogs' => 'blog#index', :as => 'blogs'
 <% end %>
 ```
 
-# As a user, I can click on the title of a blog and be routed to a page where I see the title and content of the blog post I selected.
+#### As a user, I can click on the title of a blog and be routed to a page where I see the title and content of the blog post I selected.
 
-# As a user, I can navigate from the show page back to the home page.
+#### As a user, I can navigate from the show page back to the home page.
 
 ```Ruby
 def show
@@ -69,7 +67,7 @@ end
 get '/blogs/:id' => 'blog#show', :as => 'blog'
 ```
 
-# As a user, I can navigate from the show page back to the home page.
+#### As a user, I can navigate from the show page back to the home page.
 
 ```Ruby
 # show.html.erb
@@ -82,7 +80,7 @@ get '/blogs/:id' => 'blog#show', :as => 'blog'
 get '/blogs/:id' => 'blog#show', :as => 'blog'
 ```
 
-# As a user, I see a form where I can create a new blog post.
+#### As a user, I see a form where I can create a new blog post.
 
 ```Ruby
 def new
@@ -106,20 +104,20 @@ get '/blogs/new' => 'blog#new', :as => 'new_blog'
 <%= form.submit 'Add Blog' %> <% end %>
 ```
 
-# As a user, I can click a button that will take me from the home page to a page where I can create a blog post.
+#### As a user, I can click a button that will take me from the home page to a page where I can create a blog post.
 
 ```Ruby
 <%= link_to blog.title, blog_path(blog) %>
 ```
 
-# As a user, I can navigate from the form back to the home page.
+#### As a user, I can navigate from the form back to the home page.
 
 ```Ruby
 <%= link_to 'Return to All Blogs',
 blogs_path %>
 ```
 
-# As a user, I can click a button that will submit my blog post to the database.
+#### As a user, I can click a button that will submit my blog post to the database.
 
 ```Ruby
 def create
@@ -137,7 +135,7 @@ end
 post '/blogs' => 'blog#create'
 ```
 
-# As a user, I when I submit my post, I am redirected to the home page.
+#### As a user, I when I submit my post, I am redirected to the home page.
 
 ```Ruby
 def create
@@ -150,9 +148,9 @@ def create
 end
 ```
 
-# Stretch Challenges
+## Stretch Challenges
 
-# As a user, I can delete my blog post.
+#### As a user, I can delete my blog post.
 
 ```Ruby
 def destroy
@@ -171,7 +169,7 @@ delete '/blogs/:id' => 'blog#destroy', :as => 'destroy_blog'
 <%= link_to 'Delete Post', destroy_blog_path, :method => :delete %>
 ```
 
-# As a user, I can update my blog post.
+#### As a user, I can update my blog post.
 
 ```Ruby
 def edit
@@ -206,7 +204,7 @@ get '/blogs/:id/edit' => 'blog#edit', :as => 'edit_blog'
 blog_path %>
 ```
 
-# As a developer, I can ensure that all blog posts have titles and content for each post.
+#### As a developer, I can ensure that all blog posts have titles and content for each post.
 
 ```Shell
 $ bundle add rspec-rails
@@ -243,7 +241,7 @@ class Blog < ApplicationRecord
 end
 ```
 
-# As a developer, I can ensure that all blog post titles are unique.
+#### As a developer, I can ensure that all blog post titles are unique.
 
 ```Ruby
 it 'must have unique titles' do
@@ -261,7 +259,7 @@ end
 validates :title, uniqueness: true
 ```
 
-# As a developer, I can ensure that blog post titles are at least 10 characters.
+#### As a developer, I can ensure that blog post titles are at least 10 characters.
 
 ```Ruby
 it 'must have at least 10 characters in the title' do
