@@ -24,7 +24,7 @@ $ rails c
 $ Blog.create title:'My First Blog Post', content:'This is my first blog entry. Today I learned about full-stack rails and it has gotten me a little confused, but
 it is okay!'
 
-Blog.create title:'My Second Blog Post', content:'This is my second blog post. Today I am testing out multiple blog posts and seeing how they display on my blog!
+$ Blog.create title:'My Second Blog Post', content:'This is my second blog post. Today I am testing out multiple blog posts and seeing how they display on my blog!
 ```
 
 #### As a user, I can see all the blog titles listed on the home page of the application.
