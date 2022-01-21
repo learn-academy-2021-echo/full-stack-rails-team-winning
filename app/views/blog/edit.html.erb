@@ -1,0 +1,10 @@
+<h1>Edit Blog Post</h1>
+<%= form_with model: @blog, method: :patch do |form| %> <%= form.label :title %>
+<%= form.text_field :title %>
+
+<br />
+<%= form.label :content %> <%= form.text_field :content %>
+
+<br />
+<%= form.submit 'Update blog' %> <% end %> <%= link_to 'Return to All Blog',
+blog_path %>
